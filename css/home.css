@@ -1,0 +1,938 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 72px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #111111;
+    border-bottom: 1px solid #242424;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* =========================
+   PLAYSTATION LOGO
+========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.logo span:last-child span {
+    color: #ffd84d;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #a9a9a9;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+}
+
+
+/* =========================
+   NAV RIGHT
+========================= */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    width: 170px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 0 12px;
+
+    border: 1px solid #303030;
+    border-radius: 20px;
+
+    background: #181818;
+}
+
+.search-box span {
+    color: #888888;
+    font-size: 18px;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: white;
+
+    font-size: 11px;
+}
+
+.search-box input::placeholder {
+    color: #777777;
+}
+
+.login-link {
+    color: #cccccc;
+    font-size: 13px;
+}
+
+.signup-btn {
+    background: #ffd83d;
+    color: #111111;
+
+    padding: 10px 17px;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   GAME HERO SLIDER
+========================= */
+
+.hero-slider {
+    position: relative;
+
+    width: 100%;
+    height: 570px;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   HERO DARK OVERLAY
+========================= */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.78) 35%,
+            rgba(0, 0, 0, 0.35) 70%,
+            rgba(0, 0, 0, 0.65) 100%
+        );
+}
+
+
+/* =========================
+   HERO GAME CONTENT
+========================= */
+
+.hero-content {
+    position: absolute;
+
+    left: 7%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    max-width: 500px;
+}
+
+
+/* GAME RATING */
+
+.movie-rating,
+.Game-rating {
+    color: #ffd83d;
+
+    font-size: 15px;
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.movie-rating span,
+.Game-rating span {
+    color: #dddddd;
+
+    letter-spacing: 0;
+
+    margin-left: 7px;
+
+    font-size: 13px;
+}
+
+
+/* GAME TITLE */
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1;
+
+    margin-bottom: 8px;
+}
+
+
+/* GAME TAGLINE */
+
+.hero-content h2 {
+    font-size: 22px;
+    font-weight: 400;
+
+    color: #e4e4e4;
+
+    margin-bottom: 18px;
+}
+
+
+/* GAME PLATFORM / GENRE */
+
+.release-info {
+    color: #bbbbbb;
+
+    font-size: 12px;
+
+    margin-bottom: 17px;
+}
+
+
+/* GAME DESCRIPTION */
+
+.hero-description {
+    color: #cccccc;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    max-width: 430px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   HERO GAME BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.trailer-btn,
+.book-ticket-btn {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.trailer-btn {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.book-ticket-btn {
+    background: #ffd83d;
+    color: #111111;
+}
+
+
+/* =========================
+   GAME THUMBNAILS
+========================= */
+
+.hero-thumbnails {
+    position: absolute;
+
+    right: 5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    z-index: 10;
+}
+
+.thumbnail {
+    width: 115px;
+    height: 75px;
+
+    padding: 0;
+
+    border: 2px solid transparent;
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: none;
+
+    opacity: 0.65;
+
+    transition: 0.3s;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    opacity: 1;
+
+    border-color: #ffd83d;
+}
+
+
+/* =========================
+   SLIDER ARROWS
+========================= */
+
+.slider-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 1px solid #555555;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 20;
+}
+
+.slider-arrow:hover {
+    background: #ffd83d;
+    color: #111111;
+}
+
+.previousBtn {
+    left: 25px;
+}
+
+.nextBtn {
+    right: 225px;
+}
+
+
+/* =========================
+   SLIDER DOTS
+========================= */
+
+.slider-dots {
+    position: absolute;
+
+    bottom: 25px;
+    left: 7%;
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 20;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #777777;
+
+    cursor: pointer;
+}
+
+.dot.active {
+    width: 25px;
+
+    border-radius: 5px;
+
+    background: #ffd83d;
+}
+
+
+/* =========================
+   FEATURED GAMES
+========================= */
+
+.movies-section {
+    padding: 65px 7%;
+
+    background: #111111;
+}
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 25px;
+}
+
+.section-label {
+    color: #ffd83d;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+.section-header h2 {
+    font-size: 28px;
+}
+
+.view-all {
+    color: #ffd83d;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   GAME GRID
+========================= */
+
+.movie-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================
+   GAME CARD
+========================= */
+
+.movie-card {
+    background: #181818;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-7px);
+}
+
+
+/* =========================
+   GAME POSTER
+========================= */
+
+.poster-container {
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+}
+
+.poster-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s;
+}
+
+.movie-card:hover .poster-container img {
+    transform: scale(1.05);
+}
+
+
+/* GAME RATING BADGE */
+
+.rating-badge {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    color: #ffd83d;
+
+    padding: 5px 8px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   GAME INFORMATION
+========================= */
+
+.movie-card-info {
+    padding: 14px;
+}
+
+.movie-card-info h3 {
+    font-size: 15px;
+
+    margin-bottom: 6px;
+}
+
+.movie-card-info p {
+    color: #888888;
+
+    font-size: 11px;
+
+    margin-bottom: 14px;
+}
+
+
+/* =========================
+   GAME PRICE / PLATFORM
+========================= */
+
+.movie-card-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #888888;
+
+    font-size: 10px;
+}
+
+.movie-card-bottom a {
+    background: #ffd83d;
+
+    color: #111111;
+
+    padding: 7px 10px;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* OUT OF STOCK */
+
+.movie-card-bottom a.out-of-stock {
+    background: #e53935;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #0c0c0c;
+
+    padding: 35px 7% 20px;
+
+    border-top: 1px solid #242424;
+}
+
+.footer-top {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-bottom: 1px solid #282828;
+
+    padding-bottom: 30px;
+
+    margin-bottom: 30px;
+}
+
+.footer-box {
+    text-align: center;
+
+    color: #888888;
+
+    font-size: 11px;
+}
+
+.footer-box span {
+    display: block;
+
+    color: #ffd83d;
+
+    font-size: 18px;
+
+    margin-bottom: 7px;
+}
+
+.footer-logo {
+    text-align: center;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.footer-logo strong {
+    color: #ffd83d;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #777777;
+
+    font-size: 10px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* SOCIAL LINKS */
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.social-links span {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #333333;
+
+    border-radius: 50%;
+
+    color: #888888;
+
+    font-size: 10px;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #555555;
+
+    font-size: 9px;
+
+    border-top: 1px solid #222222;
+
+    padding-top: 15px;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .search-box {
+        width: 130px;
+    }
+
+    .hero-thumbnails {
+        right: 3%;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 18px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        overflow-x: auto;
+    }
+
+    .nav-right {
+        margin-left: auto;
+    }
+
+    .search-box {
+        display: none;
+    }
+
+    .hero-slider {
+        height: 550px;
+    }
+
+    .hero-content {
+        left: 7%;
+
+        max-width: 70%;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-thumbnails {
+        display: none;
+    }
+
+    /* FIXED: HTML uses nextBtn */
+    .nextBtn {
+        right: 25px;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .poster-container {
+        height: 300px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - SMALL MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .login-link {
+        display: none;
+    }
+
+    .hero-slider {
+        height: 570px;
+    }
+
+    .hero-content {
+        left: 6%;
+
+        max-width: 88%;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content h2 {
+        font-size: 17px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .movie-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .poster-container {
+        height: 230px;
+    }
+
+    .movie-card-info {
+        padding: 10px;
+    }
+
+    .movie-card-info h3 {
+        font-size: 12px;
+    }
+
+    .movie-card-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+}
